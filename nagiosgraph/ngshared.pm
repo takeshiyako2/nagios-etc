@@ -2225,6 +2225,7 @@ sub getserverlist {
     }
 
     my %hostserv; # hash of hosts, services, and data
+=pod
     foreach my $ii (@hosts) {
         my @services = sortnaturally(keys %{$hsdata{$ii}});
         foreach my $jj (@services) {
@@ -2245,6 +2246,7 @@ sub getserverlist {
             }
         }
     }
+=cut
     #dumper(DBDEB, 'hosts', \@hosts);
     #dumper(DBDEB, 'hosts-services', \%hostserv);
     return ( host => [@hosts], hostserv => \%hostserv );
